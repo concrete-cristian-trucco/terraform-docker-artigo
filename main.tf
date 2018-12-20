@@ -5,12 +5,12 @@ resource "docker_container" "application" {
   must_run = true
   name  = "application"
      ports {
-        internal = 80
-        external = 80
+        internal = 8080
+        external = 8080
         }
 }
 
 # Find the latest Ubuntu precise image.
 resource "docker_image" "application" {
-  name = "concretecristiantrucco/breaking-bad:latest"
+  name = "pengbai/docker-supermario"
 }
